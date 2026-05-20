@@ -1,0 +1,5 @@
+garfield:
+  config-path: classpath:garfield-config.json
+
+server:
+  port: 8080

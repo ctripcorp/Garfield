@@ -1,0 +1,58 @@
+{
+  "storageEngineConfigs": [
+    {
+      "storageId": "redis_order_leader",
+      "storageType": "REDIS",
+      "enabled": true,
+      "version": 1,
+      "rateLimit": false,
+      "properties": {
+        "host": "localhost",
+        "port": 6379,
+        "timeout": 3000
+      }
+    },
+    {
+      "storageId": "kafka_order_event",
+      "storageType": "KAFKA",
+      "enabled": true,
+      "version": 1,
+      "rateLimit": false,
+      "properties": {
+        "bootstrap.servers": "localhost:9092",
+        "topic": "order-events"
+      }
+    },
+    {
+      "storageId": "custom_storage_demo",
+      "storageType": "my_custom_storage",
+      "enabled": true,
+      "version": 1,
+      "rateLimit": false,
+      "properties": {}
+    }
+  ],
+  "processConfigs": [
+    {
+      "reqClassName": "OrderDataUnit",
+      "version": 1,
+      "leaderProcess": {
+        "engineId": "redis_order_leader",
+        "processType": "KV",
+        "transferName": "orderKvTransfer"
+      },
+      "followerProcess": [
+        {
+          "engineId": "kafka_order_event",
+          "processType": "MESSAGE",
+          "transferName": "orderMqTransfer"
+        },
+        {
+          "engineId": "custom_storage_demo",
+          "processType": "KV",
+          "transferName": "orderKvTransfer"
+        }
+      ]
+    }
+  ]
+}
