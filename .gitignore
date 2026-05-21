@@ -9,3 +9,6 @@ target/
 .classpath
 .project
 *.log
+
+# Local JDK pin (jenv); team uses pom.xml java.version
+.java-version
