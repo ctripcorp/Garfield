@@ -35,7 +35,7 @@
         <resilience4j.version>2.2.0</resilience4j.version>
         <redisson.version>3.27.2</redisson.version>
         <lombok.version>1.18.42</lombok.version>
-        <jackson.version>2.17.0</jackson.version>
+        <jackson.version>2.21.3</jackson.version>
         <slf4j.version>2.0.12</slf4j.version>
         <jedis.version>5.1.2</jedis.version>
         <kafka.version>3.7.0</kafka.version>
