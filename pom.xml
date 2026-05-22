@@ -29,7 +29,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <garfield.version>1.0.0</garfield.version>
-        <spring-boot.version>3.2.5</spring-boot.version>
+        <spring-boot.version>4.0.6</spring-boot.version>
         <!-- Override super-pom's built-in Spring 4.3.4.RELEASE; Spring Boot 3.2.5 requires Spring Framework 6.1.x -->
         <spring.version>6.1.6</spring.version>
         <resilience4j.version>2.2.0</resilience4j.version>
