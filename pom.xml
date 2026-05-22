@@ -32,7 +32,7 @@
         <spring-boot.version>3.2.5</spring-boot.version>
         <!-- Override super-pom's built-in Spring 4.3.4.RELEASE; Spring Boot 3.2.5 requires Spring Framework 6.1.x -->
         <spring.version>6.1.6</spring.version>
-        <resilience4j.version>2.2.0</resilience4j.version>
+        <resilience4j.version>2.4.0</resilience4j.version>
         <redisson.version>3.27.2</redisson.version>
         <lombok.version>1.18.42</lombok.version>
         <jackson.version>2.17.0</jackson.version>
